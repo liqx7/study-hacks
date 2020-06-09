@@ -55,3 +55,10 @@ function g(name, age) {
         return "2";
     }
 }
+// 静态方法与实力方法
+var Person = /** @class */ (function () {
+    function Person(n) {
+        this.name = n;
+    }
+    return Person;
+}());

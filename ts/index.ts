@@ -67,3 +67,12 @@ function g(name: any, age?: any): any {
     return "2";
   }
 }
+
+// 静态方法与实力方法
+
+class Person {
+  protected name: string;
+  constructor(n: string) {
+    this.name = n;
+  }
+}
