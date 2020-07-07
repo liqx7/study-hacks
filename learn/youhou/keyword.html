@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<title>skew test</title>
+<style type="text/css">
+html,body,div,img{
+	margin:0;
+	padding:0;
+}
+img{
+	border:0 none;
+}
+
+</style>
+
+<script>
+	document.addEventListener(onkeydown,function(event){
+var e = event || window.event || arguments.callee.caller.arguments[0]; 
+if (e.keyCode == 74 && e.ctrlKey) {  
+                console.log("你按下了ctrl+J");  
+                var oDiv=document.createElement('div');
+                var oInput =document.createElement('input');
+                oDiv.appendChild(oInput);
+                oDiv.style.position="absolute";
+                oDiv.style.top='0px';
+                oDiv.style.right="0px";
+                document.body.appendChild(oDiv);
+
+                oInput.addEventListener(onchange, function(event){
+                	var e = event || window.event || arguments.callee.caller.arguments[0];
+                	var keyword=e.target.value;
+                	var keyArr=keyword.split(' ');
+                	var arr=$('*');
+                	arr.forEach(function(v){
+                		if(v.nodeType==3){
+                			for(var i=0;i<keyArr.length;i++){
+
+                			if(v.nodeValue.search(keyArr[i])>-1){
+                				v.nodeValue.replace(keyArr[i])
+                			}
+                			}
+                		}
+                	})
+                })
+            }
+
+	})
+	</script>
+</head>
+<body>
+	<h>qqqqq</h>
+	<p>sss</p>
+	<div>ssdwdwdwd</div>
+	<div>dwddddddddd呜呜呜呜</div>
+<div class="pic1">
+	<img src="http://5b0988e595225.cdn.sohucs.com/images/20190718/7f975c98a600464a9c29ed158e00eb06.jpeg" />
+</div>
+<div class="pic2">
+	<img src="http://5b0988e595225.cdn.sohucs.com/images/20190718/7f975c98a600464a9c29ed158e00eb06.jpeg" />
+</div>
+</body>
+</html>

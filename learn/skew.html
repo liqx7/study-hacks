@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<title>skew test</title>
+<style type="text/css">
+html,body,div,img{
+	margin:0;
+	padding:0;
+}
+img{
+	border:0 none;
+}
+.pic1{
+	width:220px;
+	height:300px;
+	padding-left:180px;
+	margin-left:-160px;
+	float:left;
+	transform:skew(-50deg,0deg);
+	-ms-transform:skew(-50deg,0deg); /* IE 9 */
+	-moz-transform:skew(-50deg,0deg); /* Firefox */
+	-webkit-transform:skew(-50deg,0deg); /* Safari and Chrome */
+	-o-transform:skew(-50deg,0deg); /* Opera */
+	overflow:hidden;
+}
+.pic1 img{
+	transform:skew(50deg,0deg);
+	-ms-transform:skew(50deg,0deg); /* IE 9 */
+	-moz-transform:skew(50deg,0deg); /* Firefox */
+	-webkit-transform:skew(50deg,0deg); /* Safari and Chrome */
+	-o-transform:skew(50deg,0deg); /* Opera */
+}
+.pic2{
+	width:400px;
+	height:300px;
+	float:left;
+	margin-left:20px;
+	transform:skew(-50deg,0deg);
+	-ms-transform:skew(-50deg,0deg); /* IE 9 */
+	-moz-transform:skew(-50deg,0deg); /* Firefox */
+	-webkit-transform:skew(-50deg,0deg); /* Safari and Chrome */
+	-o-transform:skew(-50deg,0deg); /* Opera */
+	overflow:hidden;
+}
+.pic2 img{
+	margin-left:-180px;
+	transform:skew(50deg,0deg);
+	-ms-transform:skew(50deg,0deg); /* IE 9 */
+	-moz-transform:skew(50deg,0deg); /* Firefox */
+	-webkit-transform:skew(50deg,0deg); /* Safari and Chrome */
+	-o-transform:skew(50deg,0deg); /* Opera */
+}
+</style>
+</head>
+<body>
+<div class="pic1">
+	<img src="http://5b0988e595225.cdn.sohucs.com/images/20190718/7f975c98a600464a9c29ed158e00eb06.jpeg" />
+</div>
+<div class="pic2">
+	<img src="http://5b0988e595225.cdn.sohucs.com/images/20190718/7f975c98a600464a9c29ed158e00eb06.jpeg" />
+</div>
+</body>
+</html>
